@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>Bermain dengan Warna</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+        .color-buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .color-buttons .red {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        .color-buttons .blue {
+            background-color: #4ecdc4;
+            color: white;
+        }
+        .color-buttons .yellow {
+            background-color: #ffe66d;
+            color: white;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            border: 2px solid #333;
+        }
+        .action-buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #f8f9fa;
+        }
+        .instructions {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bermain dengan Warna</h1>
+    <div class="color-buttons">
+        <button class="red" onclick="changeColor('red')">Merah</button>
+        <button class="blue" onclick="changeColor('blue')">Biru</button>
+        <button class="yellow" onclick="changeColor('yellow')">Kuning</button>
+    </div>
+    <div class="box" id="colorBox"></div>
+    <div class="action-buttons">
+        <button onclick="hideBox()">Sembunyikan Warna</button>
+        <button onclick="showBox()">Tampilkan Warna</button>
+    </div>
+    <div class="instructions">
+        Klik tombol warna untuk mengubah warna kotak.<br>
+        Gunakan tombol Sembunyikan dan Tampilkan untuk membuat warna menghilang dan muncul kembali.
+    </div>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById('colorBox').style.backgroundColor = color;
+        }
+
+        function hideBox() {
+            document.getElementById('colorBox').style.display = 'none';
+        }
+
+        function showBox() {
+            document.getElementById('colorBox').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
